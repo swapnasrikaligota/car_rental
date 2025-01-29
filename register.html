@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    
+    <title>Document</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'poppins', sans-serif;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url(back.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        .form-box.register{
+            transition: transform .50s ease;
+            transform: translateX();
+        }
+       
+        .form-box h2{
+            font-size: 2rem;
+            color: #051904;
+            text-align: center;
+        }
+        .input-box{
+            position: relative;
+            width: 100%;
+            height: 50px;
+            margin: 30px 0;
+        }
+        .input-box label{
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            font-size: 1rem;
+            color: #051904;
+            font-weight: 500;
+            pointer-events: none;
+            transition: .5s;
+
+        }
+        .input-boxinput:focus~label,
+        .input-box input:valid~label{
+            top: -10px;
+        }
+        .input-box input{
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border: 1px solid #051904;
+            border-radius: 10px;
+            outline: none;
+            font-size: 1rem;
+            color: #051904;
+            font-weight: 600;
+            padding: 0 35px 0 5px;
+        }
+        .input-box .icon{
+            position: absolute;
+            right: 8px;
+            font-size: 1.2rem;
+            color: #051904;
+            line-height: 57px;
+        }
+        .remember-forgot{
+            font-size: .9rem;
+            color: #051904;
+            font-weight: 500;
+            margin: -15px 0 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .remember-forgot label input{
+            accent-color: #051904;
+            margin-right: 3px;
+        }
+        .remember-forgot a{
+            color: #051904;
+            text-decoration: underline;
+        }
+        .remember-forgot a:hover{
+            text-decoration: underline;
+        }
+        .btn{
+            width: 100%;
+            height: 45px;
+            background-color: #051904;
+            border: none;
+            outline: none;
+            border-radius: 100px;
+            cursor: pointer;
+            font-size: 1rem;
+            color: #fff;
+            font-weight: 500;
+        }
+         .login-register{
+            font-size: .9rem;
+            color: #c9c8c8;
+            text-align: center;
+            font-weight: 500;
+            margin: 25px 0 10px;
+         }
+         .login-register p a{
+            color: #242020;
+            text-decoration: none;
+            font-weight: 600;
+         }
+         .login-register p a:hover{
+            text-decoration: underline;
+         }
+        
+    </style>
+</head>
+<body>
+    <div class="form-box register">
+    <div class="register">
+        <h2>Register</h2>
+        <form action="#">
+            <div class="input-box">
+                <span class="icon"><i class="ri-user-3-line"></i></span>
+                 <input type="text" required>
+                 <label for="text">Username</label>
+            </div>
+            <div class="input-box">
+                <span class="icon"><i class="ri-mail-line"></i></span>
+                 <input type="email" required>
+                 <label for="text">Email</label>
+            </div>
+            <div class="input-box">
+                <span class="icon"><i class="ri-lock-line"></i></span>
+                 <input type="Password" required>
+                 <label for="text">Password</label>
+            </div>
+
+            <div class="forgot">
+                <label for=""> <input type="checkbox"> Agree to the terms & conditions</label>
+              <a href="#">Forgot Password?</a>
+            </div><br>
+            <button type="submit" class="btn">Register</button>
+            <div class="login-register">
+                <p>Already have an account? <a href="#" class="login-link">Register</a></p>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
